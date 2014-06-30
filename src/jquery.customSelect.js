@@ -112,6 +112,7 @@
             }
           });
         }
+        return false;
       }).on(eventPrefix + 'blur', function () {
         $(document).off('click.customRange' + self.rootId);
         isOpen = false;
@@ -296,6 +297,8 @@
       if (event.which === 13) {
         customValueHandler(event);
       }
+    }).click(function(){
+      return false;
     });
   };
 
