@@ -128,7 +128,7 @@
       if (self.isMultiple && defaultValue) {
         function setDefaultItem() {
           if (!self.getVal().length) {
-            self.list.find('input[value=' + defaultValue + ']').attr('checked', true).change();
+            self.list.find('input[value="' + defaultValue + '"]').attr('checked', true).change();
           }
         };
         select.on(eventPrefix + 'change', setDefaultItem);
@@ -148,7 +148,7 @@
       }
     },
     setVal: function (value) {
-      var existingOption = this.element.find('option[value=' + value + ']'),
+      var existingOption = this.element.find('option[value="' + value + '"]'),
           customRange;
 
       if (existingOption.length && !existingOption[0].attributes['data-custom']) {
